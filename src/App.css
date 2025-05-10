@@ -1,0 +1,148 @@
+/* Main container */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#drum-machine {
+  background-color: #b0b0b0;
+  border: 4px solid #ffa500;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Container for drum pads and controls */
+.drum-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Drum pads grid */
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Individual drum pad */
+.drum-pad {
+  width: 80px;
+  height: 80px;
+  background-color: #808080;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s;
+}
+
+/* Active state for drum pad */
+.drum-pad.active {
+  opacity: 0.8;
+  transform: scale(0.98);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Controls container */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-left: 20px;
+}
+
+/* Individual control item */
+.control-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Label for controls */
+.control-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Toggle switch base */
+.control-toggle {
+  width: 50px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Toggle switch indicator */
+.toggle-indicator {
+  width: 25px;
+  height: 20px;
+  background-color: #0000ff;
+  transition: margin-left 0.2s;
+}
+
+/* Display for active sound */
+#display {
+  background-color: #808080;
+  height: 50px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Volume slider container */
+.volume-slider {
+  width: 100%;
+  margin: 15px 0;
+}
+
+/* Slider styling */
+.slider {
+  width: 100%;
+  height: 4px;
+  background: #808080;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* Slider thumb (indicator) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #0000ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #0000ff;
+  cursor: pointer;
+}
